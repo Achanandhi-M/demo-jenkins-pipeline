@@ -7,7 +7,6 @@ pipeline {
       }
     }
 
-
     stage('Build') {
       steps {
         sh ' sudo docker build -t myalpine .'
@@ -26,5 +25,9 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    DOCKERHUB_USER = 'achanandhi'
+    DOCKERHUB_PASSWORD = 'Achanandhi@123'
   }
 }
