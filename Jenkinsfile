@@ -18,11 +18,9 @@ pipeline {
         sh 'sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
          // Tag the Docker image with the new repository name
          sh 'sudo docker tag myalpine:latest achanandhi/alpine-test-image:myalpine '
-'
-
       // Push the Docker image to Docker Hub
-       sh ' sudo docker push $achanandhi/alpine-test-image:myalpine'
-        
+       sh 'sudo docker push achanandhi/alpine-test-image:myalpine'
+      }        
       }
     }
 
@@ -30,5 +28,7 @@ pipeline {
   environment {
     DOCKERHUB_USER = 'achanandhi'
     DOCKERHUB_PASSWORD = 'Achanandhi@123'
+  }
+}
   }
 }
