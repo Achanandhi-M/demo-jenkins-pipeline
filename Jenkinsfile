@@ -22,9 +22,8 @@ pipeline {
     }
 
   }
-}
-
   environment {
     DOCKERHUB_USER = 'achanandhi'
     DOCKERHUB_PASSWORD = 'Achanandhi@123'
   }
+}
