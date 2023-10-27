@@ -16,8 +16,8 @@ pipeline {
     stage('Push to Dockerhub') {
       steps {
         sh 'sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
-        sh 'sudo docker tag myalpine:latest achanandhi/alpine-test-image:mynewimage'
-        sh 'sudo docker push achanandhi/alpine-test-image:mynewimage'
+        sh 'sudo docker tag myalpine:latest achanandhi/alpine-test-image:mynewimage1'
+        sh 'sudo docker push achanandhi/alpine-test-image:mynewimage1'
       }
     }
 
